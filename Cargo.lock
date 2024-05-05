@@ -1041,7 +1041,7 @@ dependencies = [
  "bevy",
  "cfg-if",
  "matchbox_signaling",
- "matchbox_socket",
+ "matchbox_socket 0.9.0 (git+https://github.com/sjmueller/matchbox?branch=main)",
 ]
 
 [[package]]
@@ -2195,7 +2195,7 @@ dependencies = [
  "futures",
  "futures-timer",
  "log",
- "matchbox_socket",
+ "matchbox_socket 0.9.0",
  "tokio",
  "tracing-subscriber",
  "wasm-bindgen-futures",
@@ -3219,6 +3219,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "matchbox_protocol"
+version = "0.9.0"
+source = "git+https://github.com/sjmueller/matchbox?branch=main#2a20b36ad46444ba5c680a872dfae1df3082d540"
+dependencies = [
+ "cfg-if",
+ "derive_more",
+ "serde",
+ "uuid",
+]
+
+[[package]]
 name = "matchbox_server"
 version = "0.9.0"
 dependencies = [
@@ -3226,7 +3237,7 @@ dependencies = [
  "axum",
  "clap",
  "futures",
- "matchbox_protocol",
+ "matchbox_protocol 0.9.0",
  "matchbox_signaling",
  "serde",
  "serde_json",
@@ -3248,7 +3259,7 @@ dependencies = [
  "axum",
  "futures",
  "hyper",
- "matchbox_protocol",
+ "matchbox_protocol 0.9.0",
  "serde",
  "serde_json",
  "thiserror",
@@ -3280,7 +3291,39 @@ dependencies = [
  "ggrs",
  "js-sys",
  "log",
- "matchbox_protocol",
+ "matchbox_protocol 0.9.0",
+ "once_cell",
+ "serde",
+ "serde-wasm-bindgen",
+ "serde_json",
+ "thiserror",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "web-sys",
+ "webrtc",
+ "ws_stream_wasm",
+]
+
+[[package]]
+name = "matchbox_socket"
+version = "0.9.0"
+source = "git+https://github.com/sjmueller/matchbox?branch=main#2a20b36ad46444ba5c680a872dfae1df3082d540"
+dependencies = [
+ "async-compat",
+ "async-trait",
+ "async-tungstenite",
+ "bincode",
+ "bytes",
+ "cfg-if",
+ "derive_more",
+ "futures",
+ "futures-channel",
+ "futures-timer",
+ "futures-util",
+ "ggrs",
+ "js-sys",
+ "log",
+ "matchbox_protocol 0.9.0 (git+https://github.com/sjmueller/matchbox?branch=main)",
  "once_cell",
  "serde",
  "serde-wasm-bindgen",
@@ -4566,7 +4609,7 @@ dependencies = [
  "futures",
  "futures-timer",
  "log",
- "matchbox_socket",
+ "matchbox_socket 0.9.0",
  "tokio",
  "tracing-subscriber",
  "wasm-bindgen-futures",
